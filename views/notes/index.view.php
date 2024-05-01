@@ -11,7 +11,7 @@
       <div class="mx-auto px-2 max-w-6xl text-gray-500">
         <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           <?php foreach ($notes as $note) : ?>
-            <a href="/note/?id=<?= $note['id'] ?>" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <a href="/note/?id=<?= $note['id'] ?>" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 truncate">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Note Tite</h5>
               <p class="font-normal text-gray-700 dark:text-gray-400"><?= htmlentities($note['body']) ?></p>
             </a>

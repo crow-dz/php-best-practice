@@ -1,5 +1,5 @@
 <?php
-require base_dir('Validator.php');
+require base_dir('Core/Validator.php');
 
 $config = require base_dir('config.php');
 
@@ -28,7 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     }
 }
 
-//dd($_POST);
 
 
 view(
