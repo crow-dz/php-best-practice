@@ -1,0 +1,26 @@
+# Declare Var in Php by  Using $ then var name
+# To view Var with String we use "$var string" not ''
+# <?php echo 'xxx'; ?> == <?= 'xxx' ?>
+# There is Other Way to use Foreach
+ - <?php foreach($books as $book) : ?>
+ - <?= "<li>$book</li>";
+ - <?php endforeach; ?>
+# To Compare in Php we use === 
+# To append data to array we use $datas[] = $data
+# Unamed Function  = function(){}
+# To load logic file first we add include or require in file end with view name
+# We use $_SERVER["REQUEST_URI"] to get Current url
+# In php Class to Access to Class var we use $this->VAR 
+###################################################################################
+# $dns = 'mysql:host=localhost;port=3306;dbname=demo;user=root;charset=utf8mb4';  #
+# $pdo =new PDO($dns);                                                            #
+# $statement = $pdo->prepare('SELECT * FROM users');                              #
+# $statement->execute();                                                          #
+# $posts = $statement->fetchAll(PDO::FETCH_ASSOC);                                #
+###################################################################################
+# If file contain only Class file name must be capital
+# To view var in text we use ' = . like this src="' . $post["avatar"] . '"
+# Const must be in UPPERCASE
+# return is not only for functions it can be use in files 
+# Never Ever but user input in database query !
+#
