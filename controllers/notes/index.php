@@ -1,5 +1,6 @@
 <?php
 
+use Core\Database;
 
 $config = require base_dir('config.php');
 
