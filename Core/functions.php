@@ -11,6 +11,12 @@ function dd($value)
     die();
 }
 
+ function abort($code = 404)
+{
+    http_response_code($code);
+    view("{$code}.view.php");
+    die();
+}
 function urlIs($path)
 {
     return $_SERVER['REQUEST_URI'] === $path;

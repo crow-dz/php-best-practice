@@ -6,6 +6,7 @@
         <p><?= htmlentities($note['body']) ?></p>
     </div>
     <form class="m-2" method="POST">
+        <input type="text" name="_method" value="DELETE" hidden>
         <input name="id" type="text" hidden value="<?= $note['id'] ?>">
         <button class="text-red-400 " type="submit">Delete</button>
     </form>

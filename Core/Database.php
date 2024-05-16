@@ -4,9 +4,12 @@ namespace Core;
 
 use PDO;
 
+
+
 class Database
 
 {
+
     // Making $connection var to save connection like door key
     public $connection;
     // extract statment in var to wrap it with custom functions
@@ -35,7 +38,7 @@ class Database
     {
         $result = $this->statement->fetch();
         if (!$result) {
-            abort();
+            // abort();
         }
         return  $result;
     }
@@ -43,7 +46,7 @@ class Database
     {
         $result = $this->statement->fetchAll();
         if (!$result) {
-            abort();
+            //abort();
         }
         return  $result;
     }
