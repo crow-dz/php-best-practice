@@ -1,15 +1,16 @@
 <?php
 
+use Core\App;
+
 use Core\Database;
 
 use Core\Validator;
 
 require base_dir('Core/Validator.php');
 
-$config = require base_dir('config.php');
 
 
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);
 
 $errors = [];
 
@@ -33,4 +34,3 @@ if (empty($errors['body'])) {
 // Redirect
 header('Location:/notes');
 exit();
-

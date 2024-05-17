@@ -12,9 +12,15 @@ spl_autoload_register(function ($class) {
 });
 
 
+require base_dir('bootstrap.php');
+
+
 $router = new \Core\Router();
 
+
+
 $routes  = require base_dir('routes.php');
+
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 

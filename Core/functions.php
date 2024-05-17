@@ -11,7 +11,7 @@ function dd($value)
     die();
 }
 
- function abort($code = 404)
+function abort($code = 404)
 {
     http_response_code($code);
     view("{$code}.view.php");
@@ -29,10 +29,12 @@ function authorize($condition, $status = Response::FORBIDDEN)
     }
 }
 
-function base_dir($value){
-    return BASE_PATH . $value ;
+function base_dir($value)
+{
+    return BASE_PATH . $value;
 }
-function view($value,$param=[]){
+function view($value, $param = [])
+{
     extract($param);
-    require base_dir('views/'.$value) ;
+    require base_dir('views/' . $value);
 }
