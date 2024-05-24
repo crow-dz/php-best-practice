@@ -43,10 +43,12 @@ if ($result) {
 } else {
     $db->query('INSERT INTO users (email,password) VALUES (:email,:password)', [
         'email' => $email,
-        'password' => $password,
+        'password' => password_hash($password, PASSWORD_BCRYPT),
     ])->find();
     // Redirect
-    $_SESSION['name'] = 'Oualid Se';
+    $_SESSION['user'] = [
+        'email'=>$email
+    ];
     header('Location:/');
     exit();
 }
