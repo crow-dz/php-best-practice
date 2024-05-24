@@ -38,15 +38,21 @@ class Database
     {
         $result = $this->statement->fetch();
         if (!$result) {
-            // abort();
+            abort();
         }
+        return  $result;
+    }
+    public function find()
+    {
+        $result = $this->statement->fetch();
+
         return  $result;
     }
     public function findAll()
     {
         $result = $this->statement->fetchAll();
         if (!$result) {
-            //abort();
+            abort();
         }
         return  $result;
     }

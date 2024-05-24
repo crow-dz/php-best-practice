@@ -23,4 +23,3 @@
 # Const must be in UPPERCASE
 # return is not only for functions it can be use in files 
 # Never Ever but user input in database query !
-#
