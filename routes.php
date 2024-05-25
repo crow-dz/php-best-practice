@@ -21,9 +21,13 @@ $router->patch('/note', 'controllers/notes/update.php');
 $router->delete('/note', 'controllers/notes/destroy.php');
 
 $router->get('/register', 'controllers/registration/create.php')->only('guest');
-
 $router->post('/register', 'controllers/registration/store.php');
 
+$router->get('/login', 'controllers/sessions/create.php')->only('guest');
+
+$router->post('/session', 'controllers/sessions/store.php')->only('guest');
+
+$router->delete('/session', 'controllers/sessions/destroy.php')->only('auth');
 
 
 
