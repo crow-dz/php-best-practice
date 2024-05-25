@@ -2,8 +2,6 @@
 
 namespace Core;
 
-use Core\Middleware\Auth;
-use Core\Middleware\Guest;
 use Core\Middleware\Middleware;
 
 class Router
@@ -54,7 +52,7 @@ class Router
 
                 (new Middleware)->resolve($route['middelware']);
 
-                require base_dir($route['controller']);
+                require base_dir("Http/controllers/" . $route['controller']);
                 die();
             }
         }

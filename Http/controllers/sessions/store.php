@@ -1,26 +1,19 @@
 <?php
 
-use Core\Validator;
 use Core\App;
 use Core\Database;
-
+use Http\Forms\LoginForm;
 
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-// Validate User Input
-$errors = [];
-if (!Validator::email($email)) {
-    $errors['email'] = 'Enter Valid Email';
-}
-if (!Validator::string($password)) {
-    $errors['password'] = 'Password lenght must be more then seven';
-}
-if (count($errors)) {
+$form = new LoginForm;
+
+if (! $form->validate($email, $password)) {
     view(
         'sessions/create.view.php',
         [
-            'errors' => $errors,
+            'errors' => $form->errors(),
         ]
     );
 }
