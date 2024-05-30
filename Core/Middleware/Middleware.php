@@ -9,13 +9,13 @@ class Middleware
         'auth' => Auth::class,
         'guest' => Guest::class
     ];
-    public function resolve($key)
+    static  public function resolve($key)
     {
 
         if (!$key) {
             return;
         }
-        
+
         $middleware = static::MAP[$key];
 
         if (!$middleware) {
