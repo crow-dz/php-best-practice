@@ -1,0 +1,17 @@
+{
+    "name": "crow/demo",
+    "authors": [
+        {
+            "name": "crow-dz",
+            "email": "walid.cena@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+
+        }
+    }
+}
