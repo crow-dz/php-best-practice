@@ -61,4 +61,8 @@ class Router
         view("{$code}.view.php");
         die();
     }
+    function previousUrl()
+    {
+        return $_SERVER['HTTP_REFERER'];
+    }
 }

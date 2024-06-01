@@ -46,5 +46,6 @@ function redirect($path)
 }
 function old($key, $default = '')
 {
+
     return $_SESSION['_flash'][$key] ?? $default;
 }
